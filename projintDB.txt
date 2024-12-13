@@ -1,0 +1,133 @@
+create database if not exists projetoInt;
+use projetoInt;
+
+create table login(
+idlogin int auto_increment not null primary key,
+login varchar(40) not null,
+senha varchar(20) not null
+);
+
+insert into login values(null, 'ad', '1');
+	
+
+create table if not exists cadastro (
+idcadastro int auto_increment not null primary key,
+nome varchar(45) not null,
+email varchar(45) not null,
+login varchar(45) not null,
+password varchar(45) not null,
+cpf varchar(11) not null,
+endereco varchar(45) not null,
+cep varchar(8) not null,
+telefone varchar(11) not null,
+discord varchar(18),
+steamfriend varchar(45),
+jogos1 varchar(45),
+jogos2 varchar(45),
+jogos3 varchar(45),
+jogos4 varchar(45),
+jogos5 varchar(45)
+);
+
+
+
+create table if not exists categoria (
+idcategoria int auto_increment not null primary key,
+nome varchar(45)
+);
+
+
+create table if not exists segmentacao (
+idsegmentacao int auto_increment not null primary key,
+nome varchar(45)
+);
+
+
+create table if not exists chat (
+idchat int auto_increment not null primary key,
+data_chat date not null,
+hora_chat time not null,
+historico varchar(45) not null,
+idcadastro1 int not null,
+idcadastro2 int not null
+);
+
+alter table chat
+add constraint fk_chat_cadastro1
+foreign key (idcadastro1)
+references cadastro(idcadastro);
+
+alter table chat
+add constraint fk_chat_cadastro2
+foreign key (idcadastro2)
+references cadastro(idcadastro);
+
+create table if not exists usuario (
+idusuario int auto_increment not null primary key,
+login varchar(45) not null,
+senha varchar(45) not null,
+usuariocol Varchar(45) not null,
+idcadastro int not null
+);
+
+
+alter table usuario
+add constraint fk_usuario_cadastro
+foreign key(idcadastro)
+references cadastro(idcadastro);
+
+
+create table if not exists perfil (
+idperfil int auto_increment not null primary key,
+foto blob not null,
+descricao varchar(45),
+idusuario int not null,
+idcategoria int not null,
+idsegmentacao int not null
+);
+
+
+alter table perfil
+add constraint fk_perfil_usuario
+foreign key(idusuario)
+references usuario(idusuario);
+
+alter table perfil
+add constraint fk_perfil_categoria
+foreign key(idcategoria)
+references categoria(idcategoria);
+
+alter table perfil
+add constraint fk_perfil_segmentacao
+foreign key(idsegmentacao)
+references segmentacao(idsegmentacao);
+
+
+create table if not exists permicao (
+idpermicao int auto_increment not null primary key,
+tipo varchar(45)
+);
+alter table permicao
+add constraint PK_idpermicao primary key(idpermicao);
+alter table permicao
+change column idpermicao idpermicao int not null auto_increment;
+
+create table if not exists permicao_perfil (
+idpermicao int not null,
+idperfil int not null
+);
+alter table permicao_perfil
+add constraint PK_permicao_perfil primary key(idpermicao,idperfil);
+
+alter table permicao_perfil
+add constraint fk_permicao_perfil
+foreign key (idpermicao)
+references permicao(idpermicao);
+
+alter table permicao_perfil
+add constraint fk_perfil_permicao
+foreign key (idperfil)
+references perfil(idperfil);
+
+
+

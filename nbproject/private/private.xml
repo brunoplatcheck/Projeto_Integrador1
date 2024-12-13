@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/modelo/CadastroVO.java</file>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/view/GuiCad.java</file>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/servicos/ServicosFactory.java</file>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/dao/CadastroDAO.java</file>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/view/GUICadastrar.java</file>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/dao/LoginDAO.java</file>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/view/GUILogin.java</file>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/view/GUIManutencaoUsuario.java</file>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/servicos/CadastrarServicos.java</file>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/view/GUIPrincipal.java</file>
+            <file>file:/C:/Users/181700028/Documents/NetBeansProjects/ProjetoIntegrador-main/src/dao/DAOFactory.java</file>
+        </group>
+    </open-files>
+</project-private>
